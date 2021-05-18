@@ -1,0 +1,35 @@
+body, html 
+{
+    height: 100%;
+    margin: 0;
+}
+
+.bg 
+{
+    /* The image used */
+    background-image: url("images/backgroundImage.jpg");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hero-text 
+{
+    text-align: center;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    
+}
+
+
+#submitbutton
+{
+    margin: 8px;
+}
