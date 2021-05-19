@@ -27,7 +27,7 @@
                 
                 <form method="post"> 
                     <div class="form-group">
-                        <input name="cityname" type="text" class="form-control" id="cityname" placeholder="Eg. London, Tokyo">
+                        <input name="cityname" type="text" class="form-control" id="cityname" placeholder="Eg. London, Tokyo" value="<?php if(isset($_POST['cityname'])) {echo htmlentities($_POST['cityname']); } ?>">
                     </div>
                     <button type="submit" class="btn btn-primary" id="submitbutton">Submit</button>
                     

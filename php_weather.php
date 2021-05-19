@@ -7,8 +7,6 @@ $returnmessage = "";
 
 if($_POST)
 {
-    
-    
     $finalcityname = str_replace(' ','-',$_POST['cityname']);
     $finalurl = "https://www.weather-forecast.com/locations/".$finalcityname."/forecasts/latest";
     
@@ -22,10 +20,10 @@ if($_POST)
     }
     else
     {
-        $start_point = strpos($data, '<td bgcolor="#99CC99" height="25"><span class="phrase">');
+        $start_point = strpos($data, '</h2> (1&ndash;3 days)</div><p class="b-forecast__table-description-content"><span class="phrase">');
         
         $before_first_char_of_str = strpos($data, 'e">', $start_point) + 2;
-        $last_char_of_str = strpos($data, '</span></td>', $start_point) - 1;
+        $last_char_of_str = strpos($data, '</span></p></td><td class="b-forecast__table-description-cell--js" colspan="9"><div class="b-forecast__table-description-title"><h2>', $start_point) - 1;
         
         $length = $last_char_of_str-($before_first_char_of_str);
         $forecast = substr($data, $before_first_char_of_str+1, $length);
